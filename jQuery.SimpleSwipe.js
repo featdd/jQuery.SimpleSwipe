@@ -66,8 +66,8 @@
 			var Swipe = swipeInfo(e);
 
 			if (true === Once) {
-				if ('left' === Swipe.direction.x || 'right' === Swipe.direction.x) {
-					callback(Swipe.direction.x);
+				if ('none' !== Swipe.direction.x || 'none' !== Swipe.direction.y) {
+					callback('none' !== Swipe.direction.x ? Swipe.direction.x : Swipe.direction.y);
 					Once = false;
 				}
 			}
